@@ -7,16 +7,20 @@
     <title>Document</title>
   </head>
   <body>
-    <div id="confirm"></div>
-    <div id="prompt"></div>
+    <div id="timeout"></div>
+    <div id="interval"></div>
     <div>
-        <input type="button" value = "show alert" onclick="showAlert()" />
+      <input type="button" value="Start timeout" onclick="startTimeout()" />
     </div>
     <div>
-        <input type="button" value="Show confirm" onclick="showConfirm()"/>
+      <input type="button" value="Stop timeout" onclick="stopTimeout()" />
     </div>
     <div>
-        <input type="button" value="Show Prompt" onclick="showPrompt()" />
+      <input type="button" value="Start interval" onclick="startInterval()" />
+    </div>
+    <div>
+        <input type="button"value= " Stop interval" onclick="stopInterval()" >
+    
     </div>
 
     <script src="app.js"></script>

@@ -1,27 +1,28 @@
-const confirm = document.getElementById("confirm");
-const prompt = document.getElementById("prompt");
+const timeOut = document.getElementById("timeout");
+const interval = document.getElementById("interval");
 
-function showAlert() {
-  alert("Hello World");
+let timeoutInstance ;
+let intervalInstance ;
+
+
+function startTimeout() {
+    timeoutInstance = setTimeout(() => {
+    timeOut.innerHTML = "3 second Over";
+  }, 3000);
 }
 
-function showConfirm() {
-  let text;
-  if (window.confirm("Press a Button")) {
-    text = "You Press Oky";
-  } else {
-    text = "You press Cancel";
-  }
-  confirm.innerHTML = text;
+
+function stopTimeout(){
+    clearTimeout(timeoutInstance);
 }
 
-function showPrompt() {
-  let person = window.prompt("Enter Your Name", "Shayan");
-  let text ;
-  if(person === null || person ===""){
-    text = "User Cancelled the prompt";
-  }else{
-    text = "Hello " + person +".";
-  }
-  prompt.innerHTML = text ;
+function startInterval(){
+    intervalInstance = setInterval(()=>{
+        interval.innerHTML = new Date().toLocaleTimeString();
+    },1000);
+
+}
+
+function stopInterval(){
+ clearInterval(intervalInstance);
 }
